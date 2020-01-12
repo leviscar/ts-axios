@@ -19,7 +19,7 @@ export type Method =
 // url为必选，其它字段为可选, 默认为get请求方式
 export interface AxiosRequestConfig {
     method?: Method
-    url?: string
+    url: string
     data?: any
     params?: any
 }

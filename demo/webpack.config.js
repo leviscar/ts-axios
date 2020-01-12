@@ -21,12 +21,13 @@ module.exports = {
     */
     entry: fs.readdirSync(__dirname).reduce((entries, dir) => {
         const fullDir = path.join(__dirname, dir)
+        // console.log({'test': path.join(__dirname, 'build')})
         const fileName = path.join(fullDir, 'app.ts')
         // 判断fullDir是不是文件夹，fileName是否存在
         if(fs.statSync(fullDir).isDirectory() && fs.existsSync(fileName)) {
             entries[dir] =  ['webpack-hot-middleware/client', fileName]
         }
-
+        console.log(entries);
         return entries
     }, {}),
 
