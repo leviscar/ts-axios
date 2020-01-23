@@ -28,17 +28,13 @@ app.use(express.static(__dirname))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-app.get('/', function (req, res) {
-    res.send('Hello World!')
-})
-
-app.get('/simple', function(req, res) {
+router.get('/simple/get', function(req, res) {
     res.json({
         msg: 'hello world123'
     })
 })
 
-app.get('/base', function(req, res) {
+router.get('/base/get', function(req, res) {
     res.json(req.query)
 })
 

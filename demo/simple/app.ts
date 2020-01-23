@@ -1,4 +1,4 @@
-const axios = require('../../src/index')
+import axios from '../../src/index'
 
 // 不带参数的get
 axios({

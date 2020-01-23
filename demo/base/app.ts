@@ -1,4 +1,14 @@
+import axios from '../../src/index'
 // 参数为数组
+axios({
+    method: 'get',
+    url: '/base/get',
+    params: {
+        a: 1,
+        b: 2
+    }
+})
+
 axios({
     method: 'get',
     url: '/base/get',
@@ -66,12 +76,12 @@ axios({
 })
 
 
-// post对象实现
-axios({
-    method: 'post',
-    url: '/base/post',
-    params: {
-        a: 1,
-        b: 2
-    }
-})
+// // // post对象实现
+// // axios({
+// //     method: 'post',
+// //     url: '/base/post',
+// //     params: {
+// //         a: 1,
+// //         b: 2
+// //     }
+// // })
