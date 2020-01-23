@@ -76,12 +76,20 @@ axios({
 })
 
 
-// // // post对象实现
-// // axios({
-// //     method: 'post',
-// //     url: '/base/post',
-// //     params: {
-// //         a: 1,
-// //         b: 2
-// //     }
-// // })
+// post对象实现::普通对象
+axios({
+    method: 'post',
+    url: '/base/post',
+    data: {
+        a: 1,
+        b: 2
+    }
+})
+
+const i32Arr = new Int32Array([12, 12])
+// Int32Array对象
+axios({
+    method: 'post',
+    url: '/base/buffer',
+    data: i32Arr
+})

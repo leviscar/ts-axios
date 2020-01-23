@@ -1,4 +1,4 @@
-import { isDate, isObject} from './util'
+import { isDate, isObject, isPlainObject} from './util'
 
 /**
  * 实现一个encode函数，用于保留参数中的特殊值
@@ -50,7 +50,9 @@ export function makeUrl (url: string, params?: any): string {
         values.forEach((val) => {
             if(isDate(val)) {
                 val = val.toISOString()
-            } else {
+            }
+            else if (isPlainObject(val))
+            {
                 val = JSON.stringify(val)
             }
             parts.push(`${encode(key)}=${encode(val)}`)
